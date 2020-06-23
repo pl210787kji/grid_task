@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Just Me Again Down Here', cursive;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #393939;
+}
+
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "header header header"
+        "sidebar doted title"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-rows: 1fr 2.5fr 5.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+}
+
+.header {
+    display: grid;
+    grid-area: header;
+    background-color: #c2c2c2;
+    border: 1px solid #898989;
+    grid-template-columns: 100px 200px 1fr 200px;
+    gap: 0 30px;
+    padding: 10px 30px;
+}
+
+.header__box {
+    background-color: #861616;
+    color: #ebc5c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__box--right {
+    grid-column: 4;
+}
+
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    background-color: #acacac;
+    border: 1px solid #898989;
+    grid-template-rows: 1fr 2fr 6fr;
+    padding: 15px 15px 30px;
+    gap: 15px;
+}
+
+.sidebar__box {
+    background-color: #d6d192;
+    border: 1px solid #898989;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doted {
+    display: grid;
+    grid-area: doted;
+    background-color: #ccc5bc;
+    border: 1px solid #898989;
+    padding: 20px;
+    gap: 5px;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.doted__box {
+    background-color: #393939;
+    border: 1px solid #393939;
+}
+
+.title {
+    display: grid;
+    grid-area: title;
+    background-color: #a4a485;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    background-color: #eed9d9;
+    border: 1px solid #898989;
+    padding: 20px 30px 30px;
+    grid-template-columns: repeat(4, 1fr 2fr);
+    grid-template-rows: repeat(5, 1fr) 6px;
+    gap: 10px;
+}
+
+.main__box {
+    background-color: #80d5d0;
+    border: 1px solid #898989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__box--dark {
+    grid-area: 3/5/4/8;
+    background-color: #077068;
+}
+
+.main__box--long {
+    grid-area: 6/1/7/9;
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    background-color: #c2c2c2;
+    border: 1px solid #898989;
+}
